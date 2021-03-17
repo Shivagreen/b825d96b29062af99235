@@ -19,7 +19,7 @@ function App() {
       console.log(res.data.hits[0].title)
       console.log(res.data.hits[0].author)
       console.log(res.data.hits[0].url)
-      console.log(res.data.hits[0].created_a)
+      console.log(res.data.hits[0].created_at)
       setPosts(res.data)
     })
     .catch(err => {
@@ -35,9 +35,14 @@ function App() {
         */}
         <ul>
           {posts.map(post => {
+            return (
             <li key={post.objectID}>
               {post.hits[0].title}
+              {post.hits[0].author}
+              {post.hits[0].created_at}
+              {post.hits[0].url}
             </li>
+            )
           })}
         </ul>
     </div>
