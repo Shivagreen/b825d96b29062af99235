@@ -1,11 +1,14 @@
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
+import Posts from './components/Posts';
+import Pagination from './components/Pagination'
 import './App.css';
 
 function App() {
 
   const[posts,setPosts] = useState([]);
-  const [newPost, setNewPost] = useState("");
+ const [currentPage, setCurrentPage] = useState(1);
+ const [postsPerPage] = useState(10);
 
   // const item = () => {
   //   posts.push(newPost);
@@ -26,7 +29,15 @@ function App() {
       console.log(err);
     },[])
   })
+
+const indexofLastPost = currentPage * postsPerPage;
+const indexofFirstPost = indexofLastPost - postsPerPage;
+const currentPosts = posts.slice(indexofFirstPost,indexofLastPost);
+
+const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
+    <div>
     <div >
       {/* {posts.hits[0].created_at}
       {posts.hits[0].title}
@@ -42,9 +53,20 @@ function App() {
               {post.hits[0].created_at}
               {post.hits[0].url}
             </li>
+
             )
           })}
         </ul>
+    </div>
+    <div>
+      <Posts posts ={currentPosts} />
+      <Pagination 
+      postsPerPage ={postsPerPage} 
+      totalPosts ={posts.length}
+      paginate = {paginate}
+      />
+
+    </div>
     </div>
   );
 }
