@@ -1,0 +1,37 @@
+{"hits":
+    [{"created_at":"2021-03-17T11:23:50.000Z",
+     "title":"Mozilla postpones further an 18 years old feature request on Thunderbird","url":"https://bugzilla.mozilla.org/show_bug.cgi?id=213945#a556791929_101158",
+     "author":"PauloManrique",
+     "points":1,
+     "story_text":null,
+     "comment_text":null,
+     "num_comments":0,
+     "story_id":null,
+     "story_title":null,
+     "story_url":null,
+     "parent_id":null,
+     "created_at_i":1615980230,
+     "_tags":["story","author_PauloManrique","story_26489501"],
+     "objectID":"26489501",
+     "_highlightResult":{
+         "title":{
+             "value":"Mozilla postpones further an 18 years old feature request on Thunderbird",
+             "matchLevel":"none",
+             "matchedWords":[]},
+             "url":{
+                 "value":"https://bugzilla.mozilla.org/show_bug.cgi?id=213945#a556791929_101158",
+                 "matchLevel":"none",
+                 "matchedWords":[]},
+                 "author":{
+                     "value":"PauloManrique",
+                     "matchLevel":"none",
+                     "matchedWords":[]}}},
+                     {
+                         "created_at":"2021-03-17T11:23:03.000Z",
+                         "title":"Grice’s Maxims of Conversation",
+                         "url":"https://effectiviology.com/principles-of-effective-"
+                  }
+                
+            ]
+}
+
